@@ -68,11 +68,14 @@ class Header extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  Wrap(
-                    alignment: WrapAlignment.center,
-                    spacing: 10,
-                    runSpacing: 10,
-                    children: _buildNavItems(),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Wrap(
+                      alignment: WrapAlignment.center,
+                      spacing: 10,
+                      runSpacing: 10,
+                      children: _buildNavItems(),
+                    ),
                   ),
                 ],
               ),

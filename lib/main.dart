@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:invoix_landing/animation.dart';
 import 'package:invoix_landing/footer.dart';
 import 'package:invoix_landing/header.dart';
 import 'package:invoix_landing/legal_page/account_deletion.dart';
@@ -8,6 +9,7 @@ import 'package:invoix_landing/legal_page/terms_of_service.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:invoix_landing/main_page/home_page.dart';
 import 'package:invoix_landing/theme.dart';
+
 void main() {
   setUrlStrategy(PathUrlStrategy());
   runApp(const InvoiXWeb());
@@ -38,51 +40,41 @@ class InvoiXWeb extends StatelessWidget {
     return MaterialApp(
       title: 'InvoiX - Home Page',
       theme: const MaterialTheme(TextTheme()).dark().copyWith(
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        inputDecorationTheme: InputDecorationTheme(
-          labelStyle:
-          const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(150),
-          ),
-          isDense: true,
-          counterStyle: const TextStyle(fontSize: 0),
-          errorStyle: const TextStyle(fontSize: 0),
-        ),
-        listTileTheme: ListTileThemeData(
-          shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(15),
-              bottomLeft: Radius.circular(15),
+            visualDensity: VisualDensity.adaptivePlatformDensity,
+            inputDecorationTheme: InputDecorationTheme(
+              labelStyle:
+                  const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(150),
+              ),
+              isDense: true,
+              counterStyle: const TextStyle(fontSize: 0),
+              errorStyle: const TextStyle(fontSize: 0),
+            ),
+            listTileTheme: ListTileThemeData(
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(15),
+                  bottomLeft: Radius.circular(15),
+                ),
+              ),
+              tileColor: Colors.grey[850],
+              titleTextStyle: const TextStyle(fontSize: 18),
+            ),
+            expansionTileTheme: const ExpansionTileThemeData(
+              shape: Border.symmetric(
+                vertical: BorderSide.none,
+              ),
             ),
           ),
-          tileColor: Colors.grey[850],
-          titleTextStyle: const TextStyle(fontSize: 18),
-        ),
-        expansionTileTheme: const ExpansionTileThemeData(
-          shape: Border.symmetric(
-            vertical: BorderSide.none,
-          ),
-        ),
-      ),
       initialRoute: '/',
       onGenerateRoute: (settings) {
         return PageRouteBuilder(
-          pageBuilder: (context, animation, secondaryAnimation) => MainLayout(initialRoute: getPage(settings.name ?? "/") is HomePage ? "/" : settings.name ?? "/"),
+          pageBuilder: (context, animation, secondaryAnimation) => MainLayout(
+              initialRoute: getPage(settings.name ?? "/") is HomePage
+                  ? "/"
+                  : settings.name ?? "/"),
           settings: settings,
-          transitionsBuilder: (context, animation, secondaryAnimation, child) {
-            const begin = Offset(1.0, 0.0);
-            const end = Offset.zero;
-            const curve = Curves.ease;
-
-            var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
-            var offsetAnimation = animation.drive(tween);
-
-            return SlideTransition(
-              position: offsetAnimation,
-              child: child,
-            );
-          },
         );
       },
     );
@@ -105,8 +97,8 @@ class _MainLayoutState extends State<MainLayout> {
   void initState() {
     super.initState();
     if (getPage(widget.initialRoute) is HomePage) {
-        _currentRoute = "/";
-        } else {
+      _currentRoute = "/";
+    } else {
       _currentRoute = widget.initialRoute;
     }
   }
@@ -153,13 +145,11 @@ class _MainLayoutState extends State<MainLayout> {
                       constraints: const BoxConstraints(maxWidth: 1200),
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: AnimatedSwitcher(
-                          duration: const Duration(milliseconds: 300),
-                          child: Title(color: Theme.of(context).scaffoldBackgroundColor,
-                          title: _updateTabTitle(_currentRoute),
-
-                          child: getPage(_currentRoute)),
-                        ),
+                        child: Title(
+                            key: ValueKey<String>(_currentRoute),
+                            color: Theme.of(context).scaffoldBackgroundColor,
+                            title: _updateTabTitle(_currentRoute),
+                            child: FadeInWidget(child: getPage(_currentRoute))),
                       ),
                     ),
                   ),

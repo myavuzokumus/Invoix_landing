@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:invoix_landing/animation.dart';
 import 'package:invoix_landing/main_page/download.dart';
 import 'package:invoix_landing/main_page/faq.dart';
 import 'package:invoix_landing/main_page/features.dart';
@@ -13,18 +12,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        FadeInWidget(
-          child: ProductShowcase(),
-        ),
-        FadeInWidget(
-          child: Features(),
-        ),
-        FadeInWidget(
-          child: FAQ(),
-        ),
-        FadeInWidget(
-          child: Download(),
-        ),
+        ProductShowcase(),
+        Features(),
+        FAQ(),
+        Download(),
       ],
     );
   }
