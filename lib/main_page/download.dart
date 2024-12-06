@@ -17,7 +17,7 @@ class Download extends StatelessWidget {
           const SizedBox(height: 20),
           GestureDetector(
             onTap: () async {
-              final Uri url = Uri.parse('https://example.com');
+              final Uri url = Uri.parse('https://play.google.com/store/apps/details?id=games.sc_riber.invoix');
               if (await canLaunchUrl(url)) {
                 await launchUrl(url);
               } else {

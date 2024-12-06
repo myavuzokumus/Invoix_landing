@@ -6964,7 +6964,7 @@ else if(n==="%"){n="%25"
 j=1}q.a=k+n
 s+=j
 r=s
-p=!0}else if(o<127&&(B.Ew[o>>>4]&1<<(o&15))!==0){if(p&&65<=o&&90>=o){if(q==null)q=new A.bN("")
+p=!0}else if(o<127&&(B.Ex[o>>>4]&1<<(o&15))!==0){if(p&&65<=o&&90>=o){if(q==null)q=new A.bN("")
 if(r<s){q.a+=B.c.L(a,r,s)
 r=s}p=!1}++s}else if(o<=93&&(B.mP[o>>>4]&1<<(o&15))!==0)A.tv(a,s,"Invalid character")
 else{j=1
@@ -20455,7 +20455,7 @@ t.Dn.a(a)
 s=J.aL(a)
 r=s.j(a,0)
 r.toString
-switch(B.EQ[A.cI(r)].a){case 0:s=s.hy(a,1)
+switch(B.ER[A.cI(r)].a){case 0:s=s.hy(a,1)
 r=s[0]
 r.toString
 A.cI(r)
@@ -29295,7 +29295,7 @@ if(g.b){q=t.f
 f=q.a(q.a(B.bG.fj(a0)).j(0,"data"))
 e=A.cm(f.j(0,"message"))
 if(e!=null&&e.length!==0){d=A.Gi(f,"assertiveness")
-g.a.Pa(e,B.ET[d==null?0:d])}}c.eo(a1,B.bG.bS(!0))
+g.a.Pa(e,B.EU[d==null?0:d])}}c.eo(a1,B.bG.bS(!0))
 return
 case"flutter/navigation":q=t.e8
 if(q.a(c.gcR().b.j(0,0))!=null)q.a(c.gcR().b.j(0,0)).Er(a0).bI(new A.XE(c,a1),t.P)
@@ -33876,7 +33876,7 @@ m=A.fz(s.j(0,"fontWeightIndex"))
 l=m!=null?A.am0(m):"normal"
 r=A.as0(s.j(0,"fontSize"))
 if(r==null)r=null
-p=new A.a9p(new A.Xe(r,l,A.cm(s.j(0,"fontFamily")),B.Eq[o],B.Fe[n]))
+p=new A.a9p(new A.Xe(r,l,A.cm(s.j(0,"fontFamily")),B.Er[o],B.Fe[n]))
 break
 case"TextInput.clearClient":p=B.Ao
 break
@@ -38200,7 +38200,7 @@ if(r>255||r<0){if(s>b){q=p.a
 q.toString
 q.F(0,A.ok(a,b,s))}q=p.a
 q.toString
-q.F(0,A.ok(B.EH,0,1))
+q.F(0,A.ok(B.EI,0,1))
 b=s+1}}if(b<c)p.Ie(a,b,c,d)
 if(d){p.a.aB()
 p.a=null}}}
@@ -61610,7 +61610,7 @@ A.jD.prototype={}
 A.HV.prototype={
 kB(a,b){var s,r,q,p,o,n=$.S.a8$.d.c
 if(n==null||n.e==null)return!1
-for(s=t.G,r=0;r<2;++r){q=B.EO[r]
+for(s=t.G,r=0;r<2;++r){q=B.EP[r]
 p=n.e
 p.toString
 o=A.ajl(p,q,s)
@@ -76816,11 +76816,11 @@ $S:462}
 A.Dm.prototype={
 M(a){return B.J_}}
 A.HB.prototype={
-M(a){return B.IW}}
+M(a){return B.IY}}
 A.HW.prototype={
 M(a){return B.IZ}}
 A.JZ.prototype={
-M(a){return B.IY}}
+M(a){return B.IX}}
 A.Gd.prototype={
 M(a){var s=null,r=A.rh(B.ab,B.f_,B.AP,B.f_,B.RA.abJ(B.f6,B.f6),!0),q=A.aqY(A.aO())
 return new A.wc("/",new A.a_p(),"InvoiX - Home Page",r.adj(B.D4,new A.vK(B.yf,B.yg,!0,B.yg,new A.ic(4,A.p5(150),B.zf)),A.a0c(s,s,s,s,s,s,s,s,s,s,s,s,B.Kb,s,s,s,B.il,s,B.PQ,s),q),s)}}
@@ -76873,7 +76873,7 @@ return new A.bu(B.fj,A.he(A.b([B.RT,B.kk,A.jg(s,A.G2("assets/play_store.png",s,s
 A.Wn.prototype={
 $0(){var s=0,r=A.P(t.H),q
 var $async$$0=A.Q(function(a,b){if(a===1)return A.M(b,r)
-while(true)switch(s){case 0:q=A.h1("https://example.com",0,null)
+while(true)switch(s){case 0:q=A.h1("https://play.google.com/store/apps/details?id=games.sc_riber.invoix",0,null)
 s=5
 return A.a0(A.alQ(q),$async$$0)
 case 5:s=b?2:4
@@ -76890,7 +76890,7 @@ A.Fe.prototype={
 M(a){var s=A.bW(a,null,t.w).w.a.a>600?256:64
 return A.apb(B.Fd,null,new A.aM(s,40,s,40),null,!0)}}
 A.Fg.prototype={
-M(a){return B.IX}}
+M(a){return B.IW}}
 A.pE.prototype={
 M(a){var s=null,r=t.p
 return A.kz(s,A.a6w(A.b([A.ajY(new A.iT(B.a6,s,s,A.ans(A.p5(15),A.G2(this.e,s,196,s)),s),1),B.M7,A.ajY(A.he(A.b([A.jQ(this.c,s,B.yf,s),B.M9,A.jQ(this.d,s,s,s),B.eE,new A.v0(new A.Y0(),s,s,s,s,s,s,!1,s,!0,B.S4,s)],r),B.aS,B.ad),1)],r),B.ac,B.aX,B.ad,s),B.x,s,s,s,B.CM,s,s)}}
@@ -76898,7 +76898,7 @@ A.Y0.prototype={
 $0(){},
 $S:0}
 A.nd.prototype={
-M(a){return B.BY}}
+M(a){return B.BX}}
 A.HX.prototype={
 M(a){return new A.bu(B.fj,A.he(A.b([B.S1,B.kk,A.ans(A.p5(20),A.G2("assets/phone_canvas.png",null,null,620))],t.p),B.ac,B.ad),null)}}
 A.aV.prototype={
@@ -81824,8 +81824,8 @@ B.JS=new A.HX(null)
 B.Di=new A.Fg(null)
 B.De=new A.Fe(null)
 B.Cv=new A.EW(null)
-B.EW=A.b(s([B.JS,B.Di,B.De,B.Cv]),t.p)
-B.BY=new A.hS(B.av,B.aX,B.ad,B.ac,null,B.ba,null,B.EW,null)
+B.EX=A.b(s([B.JS,B.Di,B.De,B.Cv]),t.p)
+B.BX=new A.hS(B.av,B.aX,B.ad,B.ac,null,B.ba,null,B.EX,null)
 B.f9=new A.fE(0,"cut")
 B.fa=new A.fE(1,"copy")
 B.fb=new A.fE(2,"paste")
@@ -82193,8 +82193,8 @@ B.b2=new A.jR(2,"center")
 B.c_=new A.jR(3,"justify")
 B.aA=new A.jR(4,"start")
 B.ht=new A.jR(5,"end")
-B.Eq=A.b(s([B.bZ,B.de,B.b2,B.c_,B.aA,B.ht]),A.aa("w<jR>"))
-B.Ew=A.b(s([0,0,32754,11263,65534,34815,65534,18431]),t.t)
+B.Er=A.b(s([B.bZ,B.de,B.b2,B.c_,B.aA,B.ht]),A.aa("w<jR>"))
+B.Ex=A.b(s([0,0,32754,11263,65534,34815,65534,18431]),t.t)
 B.Ua=new A.k1(0,0)
 B.Ud=new A.k1(1,0.05)
 B.Uc=new A.k1(3,0.08)
@@ -82202,15 +82202,15 @@ B.Ue=new A.k1(6,0.11)
 B.Ub=new A.k1(8,0.12)
 B.Uf=new A.k1(12,0.14)
 B.mL=A.b(s([B.Ua,B.Ud,B.Uc,B.Ue,B.Ub,B.Uf]),A.aa("w<k1>"))
-B.EH=A.b(s([65533]),t.t)
+B.EI=A.b(s([65533]),t.t)
 B.zx=new A.p0()
 B.ew=new A.J_(1,"page")
 B.hd=new A.dt(B.B,B.ew)
-B.EO=A.b(s([B.zx,B.hd]),A.aa("w<aI>"))
+B.EP=A.b(s([B.zx,B.hd]),A.aa("w<aI>"))
 B.kQ=new A.B2(0,"named")
 B.yM=new A.B2(1,"anonymous")
-B.EQ=A.b(s([B.kQ,B.yM]),A.aa("w<B2>"))
-B.ET=A.b(s([B.i_,B.i0]),A.aa("w<u1>"))
+B.ER=A.b(s([B.kQ,B.yM]),A.aa("w<B2>"))
+B.EU=A.b(s([B.i_,B.i0]),A.aa("w<u1>"))
 B.mM=A.b(s([0,0,26624,1023,65534,2047,65534,2047]),t.t)
 B.e3=A.b(s([B.cK,B.bE,B.eS,B.eT,B.hZ]),t.QP)
 B.cI=new A.hG(0,"leading")
@@ -82238,8 +82238,8 @@ B.RW=new A.cC("FAQ",null,B.cB,B.b2,null,null,null)
 B.RU=new A.cC("What is InvoiX?",null,null,B.b2,null,null,null)
 B.RR=new A.cC("InvoiX is an AI-powered invoice analysis tool designed to streamline and optimize your invoice management process.",null,null,null,null,null,null)
 B.J0=new A.bu(B.cd,B.RR,null)
-B.EU=A.b(s([B.J0]),t.p)
-B.D7=new A.pC(B.RU,B.EU,null)
+B.EV=A.b(s([B.J0]),t.p)
+B.D7=new A.pC(B.RU,B.EV,null)
 B.S2=new A.cC("How does it work?",null,null,B.b2,null,null,null)
 B.S_=new A.cC("InvoiX works by providing an intuitive interface that leverages AI to analyze and optimize your invoice management process.",null,null,null,null,null,null)
 B.J1=new A.bu(B.cd,B.S_,null)
@@ -82388,19 +82388,19 @@ B.Hq=new A.l0(5,"spaceEvenly")
 B.eg=new A.GI(0,"min")
 B.n5=new A.d(42)
 B.rM=new A.d(8589935146)
-B.EX=A.b(s([B.n5,null,null,B.rM]),t.L)
+B.EY=A.b(s([B.n5,null,null,B.rM]),t.L)
 B.ry=new A.d(43)
 B.rN=new A.d(8589935147)
-B.EY=A.b(s([B.ry,null,null,B.rN]),t.L)
+B.EZ=A.b(s([B.ry,null,null,B.rN]),t.L)
 B.rz=new A.d(45)
 B.rO=new A.d(8589935149)
-B.EZ=A.b(s([B.rz,null,null,B.rO]),t.L)
+B.F_=A.b(s([B.rz,null,null,B.rO]),t.L)
 B.rA=new A.d(46)
 B.cr=new A.d(8589935150)
-B.F_=A.b(s([B.rA,null,null,B.cr]),t.L)
+B.F0=A.b(s([B.rA,null,null,B.cr]),t.L)
 B.rB=new A.d(47)
 B.rP=new A.d(8589935151)
-B.F0=A.b(s([B.rB,null,null,B.rP]),t.L)
+B.F1=A.b(s([B.rB,null,null,B.rP]),t.L)
 B.rC=new A.d(48)
 B.ju=new A.d(8589935152)
 B.Fj=A.b(s([B.rC,null,null,B.ju]),t.L)
@@ -82435,48 +82435,48 @@ B.FP=A.b(s([B.ea,B.ea,B.fV,null]),t.L)
 B.fR=new A.d(4294967555)
 B.Fi=A.b(s([B.fR,null,B.fR,null]),t.L)
 B.bj=new A.d(4294968065)
-B.EI=A.b(s([B.bj,null,null,B.cs]),t.L)
+B.EJ=A.b(s([B.bj,null,null,B.cs]),t.L)
 B.b5=new A.d(4294968066)
-B.EJ=A.b(s([B.b5,null,null,B.ct]),t.L)
+B.EK=A.b(s([B.b5,null,null,B.ct]),t.L)
 B.b6=new A.d(4294968067)
-B.EK=A.b(s([B.b6,null,null,B.cu]),t.L)
+B.EL=A.b(s([B.b6,null,null,B.cu]),t.L)
 B.bk=new A.d(4294968068)
-B.Ex=A.b(s([B.bk,null,null,B.cv]),t.L)
+B.Ey=A.b(s([B.bk,null,null,B.cv]),t.L)
 B.jn=new A.d(4294968321)
-B.ER=A.b(s([B.jn,null,null,B.jv]),t.L)
+B.ES=A.b(s([B.jn,null,null,B.jv]),t.L)
 B.FQ=A.b(s([B.e9,B.e9,B.fU,null]),t.L)
-B.EP=A.b(s([B.ap,null,null,B.cr]),t.L)
+B.EQ=A.b(s([B.ap,null,null,B.cr]),t.L)
 B.co=new A.d(4294968069)
-B.EL=A.b(s([B.co,null,null,B.ec]),t.L)
+B.EM=A.b(s([B.co,null,null,B.ec]),t.L)
 B.fQ=new A.d(4294967309)
 B.jt=new A.d(8589935117)
-B.EG=A.b(s([B.fQ,null,null,B.jt]),t.L)
+B.EH=A.b(s([B.fQ,null,null,B.jt]),t.L)
 B.cp=new A.d(4294968070)
-B.EM=A.b(s([B.cp,null,null,B.ee]),t.L)
+B.EN=A.b(s([B.cp,null,null,B.ee]),t.L)
 B.jo=new A.d(4294968327)
-B.ES=A.b(s([B.jo,null,null,B.ju]),t.L)
+B.ET=A.b(s([B.jo,null,null,B.ju]),t.L)
 B.FR=A.b(s([B.eb,B.eb,B.fW,null]),t.L)
 B.e7=new A.d(4294968071)
-B.EN=A.b(s([B.e7,null,null,B.ed]),t.L)
+B.EO=A.b(s([B.e7,null,null,B.ed]),t.L)
 B.e8=new A.d(4294968072)
 B.Ea=A.b(s([B.e8,null,null,B.ef]),t.L)
 B.FS=A.b(s([B.bP,B.bP,B.cq,null]),t.L)
-B.Hr=new A.d6(["*",B.EX,"+",B.EY,"-",B.EZ,".",B.F_,"/",B.F0,"0",B.Fj,"1",B.Fk,"2",B.Fl,"3",B.Fm,"4",B.Fn,"5",B.Fo,"6",B.Fp,"7",B.Fq,"8",B.Ff,"9",B.Fg,"Alt",B.FP,"AltGraph",B.Fi,"ArrowDown",B.EI,"ArrowLeft",B.EJ,"ArrowRight",B.EK,"ArrowUp",B.Ex,"Clear",B.ER,"Control",B.FQ,"Delete",B.EP,"End",B.EL,"Enter",B.EG,"Home",B.EM,"Insert",B.ES,"Meta",B.FR,"PageDown",B.EN,"PageUp",B.Ea,"Shift",B.FS],A.aa("d6<y,J<d?>>"))
+B.Hr=new A.d6(["*",B.EY,"+",B.EZ,"-",B.F_,".",B.F0,"/",B.F1,"0",B.Fj,"1",B.Fk,"2",B.Fl,"3",B.Fm,"4",B.Fn,"5",B.Fo,"6",B.Fp,"7",B.Fq,"8",B.Ff,"9",B.Fg,"Alt",B.FP,"AltGraph",B.Fi,"ArrowDown",B.EJ,"ArrowLeft",B.EK,"ArrowRight",B.EL,"ArrowUp",B.Ey,"Clear",B.ES,"Control",B.FQ,"Delete",B.EQ,"End",B.EM,"Enter",B.EH,"Home",B.EN,"Insert",B.ET,"Meta",B.FR,"PageDown",B.EO,"PageUp",B.Ea,"Shift",B.FS],A.aa("d6<y,J<d?>>"))
 B.Eo=A.b(s([42,null,null,8589935146]),t.Z)
 B.Ep=A.b(s([43,null,null,8589935147]),t.Z)
-B.Er=A.b(s([45,null,null,8589935149]),t.Z)
-B.Es=A.b(s([46,null,null,8589935150]),t.Z)
-B.Et=A.b(s([47,null,null,8589935151]),t.Z)
-B.Eu=A.b(s([48,null,null,8589935152]),t.Z)
-B.Ev=A.b(s([49,null,null,8589935153]),t.Z)
-B.Ey=A.b(s([50,null,null,8589935154]),t.Z)
-B.Ez=A.b(s([51,null,null,8589935155]),t.Z)
-B.EA=A.b(s([52,null,null,8589935156]),t.Z)
-B.EB=A.b(s([53,null,null,8589935157]),t.Z)
-B.EC=A.b(s([54,null,null,8589935158]),t.Z)
-B.ED=A.b(s([55,null,null,8589935159]),t.Z)
-B.EE=A.b(s([56,null,null,8589935160]),t.Z)
-B.EF=A.b(s([57,null,null,8589935161]),t.Z)
+B.Es=A.b(s([45,null,null,8589935149]),t.Z)
+B.Et=A.b(s([46,null,null,8589935150]),t.Z)
+B.Eu=A.b(s([47,null,null,8589935151]),t.Z)
+B.Ev=A.b(s([48,null,null,8589935152]),t.Z)
+B.Ew=A.b(s([49,null,null,8589935153]),t.Z)
+B.Ez=A.b(s([50,null,null,8589935154]),t.Z)
+B.EA=A.b(s([51,null,null,8589935155]),t.Z)
+B.EB=A.b(s([52,null,null,8589935156]),t.Z)
+B.EC=A.b(s([53,null,null,8589935157]),t.Z)
+B.ED=A.b(s([54,null,null,8589935158]),t.Z)
+B.EE=A.b(s([55,null,null,8589935159]),t.Z)
+B.EF=A.b(s([56,null,null,8589935160]),t.Z)
+B.EG=A.b(s([57,null,null,8589935161]),t.Z)
 B.F8=A.b(s([8589934852,8589934852,8589934853,null]),t.Z)
 B.Ed=A.b(s([4294967555,null,4294967555,null]),t.Z)
 B.Ee=A.b(s([4294968065,null,null,8589935154]),t.Z)
@@ -82494,7 +82494,7 @@ B.Fa=A.b(s([8589934854,8589934854,8589934855,null]),t.Z)
 B.Ek=A.b(s([4294968071,null,null,8589935155]),t.Z)
 B.El=A.b(s([4294968072,null,null,8589935161]),t.Z)
 B.Fb=A.b(s([8589934850,8589934850,8589934851,null]),t.Z)
-B.rS=new A.d6(["*",B.Eo,"+",B.Ep,"-",B.Er,".",B.Es,"/",B.Et,"0",B.Eu,"1",B.Ev,"2",B.Ey,"3",B.Ez,"4",B.EA,"5",B.EB,"6",B.EC,"7",B.ED,"8",B.EE,"9",B.EF,"Alt",B.F8,"AltGraph",B.Ed,"ArrowDown",B.Ee,"ArrowLeft",B.Ef,"ArrowRight",B.Eg,"ArrowUp",B.Eh,"Clear",B.Em,"Control",B.F9,"Delete",B.Ec,"End",B.Ei,"Enter",B.Eb,"Home",B.Ej,"Insert",B.En,"Meta",B.Fa,"PageDown",B.Ek,"PageUp",B.El,"Shift",B.Fb],A.aa("d6<y,J<n?>>"))
+B.rS=new A.d6(["*",B.Eo,"+",B.Ep,"-",B.Es,".",B.Et,"/",B.Eu,"0",B.Ev,"1",B.Ew,"2",B.Ez,"3",B.EA,"4",B.EB,"5",B.EC,"6",B.ED,"7",B.EE,"8",B.EF,"9",B.EG,"Alt",B.F8,"AltGraph",B.Ed,"ArrowDown",B.Ee,"ArrowLeft",B.Ef,"ArrowRight",B.Eg,"ArrowUp",B.Eh,"Clear",B.Em,"Control",B.F9,"Delete",B.Ec,"End",B.Ei,"Enter",B.Eb,"Home",B.Ej,"Insert",B.En,"Meta",B.Fa,"PageDown",B.Ek,"PageUp",B.El,"Shift",B.Fb],A.aa("d6<y,J<n?>>"))
 B.Hs=new A.d6([0,"FontWeight.w100",1,"FontWeight.w200",2,"FontWeight.w300",3,"FontWeight.w400",4,"FontWeight.w500",5,"FontWeight.w600",6,"FontWeight.w700",7,"FontWeight.w800",8,"FontWeight.w900"],A.aa("d6<n,y>"))
 B.Ig={"deleteBackward:":0,"deleteWordBackward:":1,"deleteToBeginningOfLine:":2,"deleteForward:":3,"deleteWordForward:":4,"deleteToEndOfLine:":5,"moveLeft:":6,"moveRight:":7,"moveForward:":8,"moveBackward:":9,"moveUp:":10,"moveDown:":11,"moveLeftAndModifySelection:":12,"moveRightAndModifySelection:":13,"moveUpAndModifySelection:":14,"moveDownAndModifySelection:":15,"moveWordLeft:":16,"moveWordRight:":17,"moveToBeginningOfParagraph:":18,"moveToEndOfParagraph:":19,"moveWordLeftAndModifySelection:":20,"moveWordRightAndModifySelection:":21,"moveParagraphBackwardAndModifySelection:":22,"moveParagraphForwardAndModifySelection:":23,"moveToLeftEndOfLine:":24,"moveToRightEndOfLine:":25,"moveToBeginningOfDocument:":26,"moveToEndOfDocument:":27,"moveToLeftEndOfLineAndModifySelection:":28,"moveToRightEndOfLineAndModifySelection:":29,"moveToBeginningOfDocumentAndModifySelection:":30,"moveToEndOfDocumentAndModifySelection:":31,"transpose:":32,"scrollToBeginningOfDocument:":33,"scrollToEndOfDocument:":34,"scrollPageUp:":35,"scrollPageDown:":36,"pageUpAndModifySelection:":37,"pageDownAndModifySelection:":38,"cancelOperation:":39,"insertTab:":40,"insertBacktab:":41}
 B.x7=new A.jK(!1)
@@ -83300,31 +83300,31 @@ B.IS=new A.qi(0,null)
 B.IT=new A.Hb(0,"portrait")
 B.IU=new A.Hb(1,"landscape")
 B.IV=new A.wI(null)
-B.RZ=new A.cC("Patches",null,B.cB,null,null,null,null)
-B.eE=new A.eR(null,16,null,null)
-B.HM=new A.nw("# Patch notes for InvoiX app updates:\n## Patch 1.5.0\n- EN/TR support added.\n- Filter screen added.\n- Introduction page added. \n- List element design has been changed. \n- Backend migration and control of transactions.\n- Currency added.\n- Company id added.\n- Invoice analysis cache added.\n- AI Insights infrastructure added.\n- Excel output was switched to isolate structure and application freezing was prevented.\n- Profile screen has been added.\n- Plans page has been added.\n- Settings page has been added.\n",null)
-B.F1=A.b(s([B.RZ,B.eE,B.HM]),t.p)
-B.BW=new A.hS(B.av,B.aX,B.ad,B.aS,null,B.ba,null,B.F1,null)
-B.IW=new A.bu(B.cd,B.BW,null)
 B.Df=new A.pE("Analyze your Invoices with Ease","Doesn't matter how many invoices you have, InvoiX will help you analyze them with ease.","assets/holding_phone.png",null)
 B.Dh=new A.pE("AI-Powered Invoice Analysis","Analyze your invoices with AI to enhance efficiency and accuracy. Utilize AI to gain detailed insights and streamline your invoice processing.","assets/fast_process.png",null)
 B.Dg=new A.pE("Stock Management Made Easy","InvoiX helps you manage your stock with ease. Track your stock levels, set reorder points, and generate reports to make informed decisions.","assets/secure_infrastructure.png",null)
 B.FT=A.b(s([B.Df,B.Dh,B.Dg]),t.p)
 B.C0=new A.hS(B.av,B.jy,B.ad,B.ac,null,B.ba,null,B.FT,null)
-B.IX=new A.bu(B.fj,B.C0,null)
+B.IW=new A.bu(B.fj,B.C0,null)
 B.RY=new A.cC("Terms of Service",null,B.cB,null,null,null,null)
+B.eE=new A.eR(null,16,null,null)
 B.HL=new A.nw('*Last updated: December 6, 2024*\n\nPlease read these Terms of Service ("Terms") carefully before using the InvoiX application and services. By accessing or using our services, you agree to these Terms.\n\n## 1. Acceptance of Terms\n\nBy accessing or using our services, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree, you may not access our services.\n\n## 2. Changes to Terms\n\nWe reserve the right to modify these Terms at any time. Notification of changes will be provided through email or application updates. Continued use of the services after changes constitutes acceptance.\n\n## 3. Access to the Service\n\nWe reserve the right to withdraw, suspend, or amend our service, and any material we provide, without prior notice or liability. We are not liable if our service is unavailable for any reason.\n\n## 4. Prohibited Uses\n\nYou agree not to use our services:\n\n- For unlawful purposes or activities.\n- To distribute malware or harmful software.\n- To infringe on intellectual property rights.\n- To engage in harassment, fraud, or other abusive behavior.\n\nViolation of these rules may result in account suspension or termination.\n\n## 5. Intellectual Property Rights\n\nThe Service and its original content, features, and functionality are the exclusive property of InvoiX and its licensors. You may not reproduce, distribute, or create derivative works without prior written permission.\n\n## 6. Termination\n\nWe may terminate or suspend your account and access to the service immediately, without notice, for any violation of these Terms or applicable laws.\n\n## 7. Limitation of Liability\n\nInvoiX and its affiliates are not liable for indirect, incidental, special, consequential, or punitive damages arising from your use of the service, including but not limited to data loss or service interruptions.\n\n## 8. Governing Law\n\nThese Terms are governed by and construed in accordance with the laws of the European Union (EU), including GDPR compliance, without regard to conflict of law provisions.\n\n## 9. Data Retention\n\nWe retain your email address and account creation date for up to 1 year after account deletion to prevent abuse of free usage rights. Other data is deleted promptly after account closure.\n\n## 10. Indemnification\n\nYou agree to indemnify and hold harmless InvoiX and its affiliates from any claims, damages, or expenses resulting from your violation of these Terms.\n\n## 11. Notification of Changes\n\nWe will notify you of any significant changes to these Terms via email or within the application. Your continued use after such changes will be considered as acceptance.\n\n## 12. User Content\n\nAny content you upload or share through the service remains your property. By uploading content, you grant InvoiX a non-exclusive license to use, reproduce, and distribute the content solely for service operations.\n\n## 13. Disclaimer\n\nInvoiX is not responsible for damages caused by incorrect information provided by the AI or third-party services used within the application.\n\n## 14. Contact Us\n\nFor questions or concerns about these Terms, contact us at support@sc-riber.games.\n',null)
 B.F4=A.b(s([B.RY,B.eE,B.HL]),t.p)
-B.BX=new A.hS(B.av,B.aX,B.ad,B.aS,null,B.ba,null,B.F4,null)
-B.IY=new A.bu(B.cd,B.BX,null)
+B.BW=new A.hS(B.av,B.aX,B.ad,B.aS,null,B.ba,null,B.F4,null)
+B.IX=new A.bu(B.cd,B.BW,null)
+B.RZ=new A.cC("Patches",null,B.cB,null,null,null,null)
+B.HO=new A.nw("# Patch notes for InvoiX app updates:\n## Patch 1.6.0\n- Design and layout changes.\n- Wide screen support added. \n- Added file grab and drag for Web version.\n- Top 5 invoices is increased to 10.\n- Filter panel renewed.\n- All in one sheet for excel output added.\n- Subscription effects added.\n- Subscription management added.\n- The refreshing bug has been fixed when dragging the bottomsheet.\n- Fixed No Scroll: ProfileBar doesn't able to scrollable.\n- Date regex updated.\n\n## Patch 1.5.0\n- EN/TR support added.\n- Filter screen added.\n- Introduction page added. \n- List element design has been changed. \n- Backend migration and control of transactions.\n- Currency added.\n- Company id added.\n- Invoice analysis cache added.\n- AI Insights infrastructure added.\n- Excel output was switched to isolate structure and application freezing was prevented.\n- Profile screen has been added.\n- Plans page has been added.\n- Settings page has been added.\n",null)
+B.Eq=A.b(s([B.RZ,B.eE,B.HO]),t.p)
+B.BY=new A.hS(B.av,B.aX,B.ad,B.aS,null,B.ba,null,B.Eq,null)
+B.IY=new A.bu(B.cd,B.BY,null)
 B.S5=new A.cC("Privacy Policy",null,B.cB,null,null,null,null)
-B.HN=new A.nw('*Last updated: December 6, 2024*\n\nThis Privacy Policy describes how InvoiX ("we", "us", or "our") collects, uses, and discloses your personal information when you use our application and services. By using our services, you consent to the terms outlined in this Privacy Policy.\n\n## 1. Information We Collect\n\nWe collect information in the following ways:\n\n- **Information You Provide Directly:** This includes data you provide when creating an account, using our services, or contacting support (e.g., name, email address, and any messages or files you send).\n\n## 2. How We Use Your Information\n\nWe use the collected information to:\n\n- Provide, maintain, and improve our services.\n- Develop new features and functionalities.\n- Personalize your user experience.\n- Communicate with you regarding updates, promotions, or support.\n- Ensure the security and integrity of our platform.\n\n## 3. Information Sharing and Disclosure\n\nWe do not share your personal information with companies, organizations, or individuals outside of InvoiX, except in the following circumstances:\n\n- **With Your Consent:** When you provide explicit consent for sharing.\n- **For External Processing:** We may share data with trusted service providers who process information on our behalf, following strict confidentiality and security agreements.\n- **For Legal Reasons:** If required by law, regulation, or valid legal process, we may disclose your information.\n\n## 4. Data Security\n\nWe employ robust technical and organizational measures to protect your data from unauthorized access, alteration, disclosure, or destruction. These include encryption, access controls, and regular security assessments.\n\n## 5. Data Retention\n\nWe retain your personal information as follows:\n\n- Basic account details (email address and account creation date) for 1 year after account deletion to prevent abuse of free usage rights.\n- Other data is deleted promptly after account closure, unless required by law or for legitimate business purposes.\n\n## 6. Your Rights\n\nYou have the right to:\n\n- Access, correct, or delete your personal information.\n- Restrict or object to data processing in certain circumstances.\n- Lodge a complaint with a relevant data protection authority if you believe your rights are violated.\n\nFor exercising these rights, contact us at support@sc-riber.games.\n\n## 7. Changes to This Privacy Policy\n\nWe may update this Privacy Policy periodically. Changes will be effective when posted on this page. We encourage you to review this policy regularly to stay informed.\n\n## 8. Contact Us\n\nFor any questions about this Privacy Policy, reach out to us at support@sc-riber.games.\n\n**Disclaimer:** InvoiX is not responsible for damages caused by incorrect information provided by the AI or third-party services used within the application.\n    ',null)
-B.FM=A.b(s([B.S5,B.eE,B.HN]),t.p)
+B.HM=new A.nw('*Last updated: December 6, 2024*\n\nThis Privacy Policy describes how InvoiX ("we", "us", or "our") collects, uses, and discloses your personal information when you use our application and services. By using our services, you consent to the terms outlined in this Privacy Policy.\n\n## 1. Information We Collect\n\nWe collect information in the following ways:\n\n- **Information You Provide Directly:** This includes data you provide when creating an account, using our services, or contacting support (e.g., name, email address, and any messages or files you send).\n\n## 2. How We Use Your Information\n\nWe use the collected information to:\n\n- Provide, maintain, and improve our services.\n- Develop new features and functionalities.\n- Personalize your user experience.\n- Communicate with you regarding updates, promotions, or support.\n- Ensure the security and integrity of our platform.\n\n## 3. Information Sharing and Disclosure\n\nWe do not share your personal information with companies, organizations, or individuals outside of InvoiX, except in the following circumstances:\n\n- **With Your Consent:** When you provide explicit consent for sharing.\n- **For External Processing:** We may share data with trusted service providers who process information on our behalf, following strict confidentiality and security agreements.\n- **For Legal Reasons:** If required by law, regulation, or valid legal process, we may disclose your information.\n\n## 4. Data Security\n\nWe employ robust technical and organizational measures to protect your data from unauthorized access, alteration, disclosure, or destruction. These include encryption, access controls, and regular security assessments.\n\n## 5. Data Retention\n\nWe retain your personal information as follows:\n\n- Basic account details (email address and account creation date) for 1 year after account deletion to prevent abuse of free usage rights.\n- Other data is deleted promptly after account closure, unless required by law or for legitimate business purposes.\n\n## 6. Your Rights\n\nYou have the right to:\n\n- Access, correct, or delete your personal information.\n- Restrict or object to data processing in certain circumstances.\n- Lodge a complaint with a relevant data protection authority if you believe your rights are violated.\n\nFor exercising these rights, contact us at support@sc-riber.games.\n\n## 7. Changes to This Privacy Policy\n\nWe may update this Privacy Policy periodically. Changes will be effective when posted on this page. We encourage you to review this policy regularly to stay informed.\n\n## 8. Contact Us\n\nFor any questions about this Privacy Policy, reach out to us at support@sc-riber.games.\n\n**Disclaimer:** InvoiX is not responsible for damages caused by incorrect information provided by the AI or third-party services used within the application.\n    ',null)
+B.FM=A.b(s([B.S5,B.eE,B.HM]),t.p)
 B.BZ=new A.hS(B.av,B.aX,B.ad,B.aS,null,B.ba,null,B.FM,null)
 B.IZ=new A.bu(B.cd,B.BZ,null)
 B.RV=new A.cC("Account Deletion Instructions",null,B.cB,null,null,null,null)
-B.HO=new A.nw("If you wish to delete your InvoiX account, please follow these steps:\n\n1. Log in to your InvoiX account\n2. Navigate to Account Settings\n3. Scroll to the bottom and click on \"Delete Account\"\n4. Read the information about account deletion carefully\n5. If you're sure, click \"Confirm Deletion\"\n\n**Please note:** Account deletion is permanent and cannot be undone. All your data will be permanently removed from our systems.\n\nIf you have any issues or need assistance with account deletion, please contact our support team at support@sc-riber.games.\n\n## What happens when you delete your account?\n\n- Your account and all associated data will be permanently deleted\n- You will no longer have access to any of your invoices or client information\n- Any recurring invoices or scheduled payments will be cancelled\n- Your username will be released and may become available for others to use\n\n**Note:** To prevent abuse of free usage rights, only your email address and account creation date will be retained for 1 year after account deletion.\n\n## Alternatives to account deletion\n\nIf you're considering deleting your account due to concerns or issues, please consider the following alternatives:\n\n- **Contact our support team:** We may be able to address your concerns or resolve any issues you're experiencing.\n- **Adjust your notification settings:** If you're receiving too many emails, you can customize your notification preferences.\n\nRemember, once your account is deleted, it cannot be recovered. If you're sure you want to proceed with account deletion, follow the steps outlined above.\n",null)
-B.F7=A.b(s([B.RV,B.eE,B.HO]),t.p)
+B.HN=new A.nw("If you wish to delete your InvoiX account, please follow these steps:\n\n1. Log in to your InvoiX account\n2. Navigate to Account Settings\n3. Scroll to the bottom and click on \"Delete Account\"\n4. Read the information about account deletion carefully\n5. If you're sure, click \"Confirm Deletion\"\n\n**Please note:** Account deletion is permanent and cannot be undone. All your data will be permanently removed from our systems.\n\nIf you have any issues or need assistance with account deletion, please contact our support team at support@sc-riber.games.\n\n## What happens when you delete your account?\n\n- Your account and all associated data will be permanently deleted\n- You will no longer have access to any of your invoices or client information\n- Any recurring invoices or scheduled payments will be cancelled\n- Your username will be released and may become available for others to use\n\n**Note:** To prevent abuse of free usage rights, only your email address and account creation date will be retained for 1 year after account deletion.\n\n## Alternatives to account deletion\n\nIf you're considering deleting your account due to concerns or issues, please consider the following alternatives:\n\n- **Contact our support team:** We may be able to address your concerns or resolve any issues you're experiencing.\n- **Adjust your notification settings:** If you're receiving too many emails, you can customize your notification preferences.\n\nRemember, once your account is deleted, it cannot be recovered. If you're sure you want to proceed with account deletion, follow the steps outlined above.\n",null)
+B.F7=A.b(s([B.RV,B.eE,B.HN]),t.p)
 B.C_=new A.hS(B.av,B.aX,B.ad,B.aS,null,B.ba,null,B.F7,null)
 B.J_=new A.bu(B.cd,B.C_,null)
 B.bx=new A.HA(0,"fill")
@@ -84225,8 +84225,8 @@ B.U_=new A.zn(0,"inside")
 B.U0=new A.zn(1,"higher")
 B.U1=new A.zn(2,"lower")
 B.BV=new A.m(67108864)
-B.EV=A.b(s([B.BV,B.R]),t.t_)
-B.U2=new A.hE(B.EV)
+B.EW=A.b(s([B.BV,B.R]),t.t_)
+B.U2=new A.hE(B.EW)
 B.U3=new A.hE(null)
 B.kG=new A.oB(0,"backButton")
 B.kH=new A.oB(1,"nextButton")
