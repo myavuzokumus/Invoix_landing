@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:invoix_landing/animation.dart';
 import 'package:invoix_landing/footer.dart';
 import 'package:invoix_landing/header.dart';
@@ -37,46 +38,48 @@ class InvoiXWeb extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'InvoiX - Home Page',
-      theme: const MaterialTheme(TextTheme()).dark().copyWith(
-            visualDensity: VisualDensity.adaptivePlatformDensity,
-            inputDecorationTheme: InputDecorationTheme(
-              labelStyle:
-                  const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(150),
+    return ProviderScope(
+      child: MaterialApp(
+        title: 'InvoiX - Home Page',
+        theme: const MaterialTheme(TextTheme()).dark().copyWith(
+              visualDensity: VisualDensity.adaptivePlatformDensity,
+              inputDecorationTheme: InputDecorationTheme(
+                labelStyle:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(150),
+                ),
+                isDense: true,
+                counterStyle: const TextStyle(fontSize: 0),
+                errorStyle: const TextStyle(fontSize: 0),
               ),
-              isDense: true,
-              counterStyle: const TextStyle(fontSize: 0),
-              errorStyle: const TextStyle(fontSize: 0),
-            ),
-            listTileTheme: ListTileThemeData(
-              shape: const RoundedRectangleBorder(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(15),
-                  bottomLeft: Radius.circular(15),
+              listTileTheme: ListTileThemeData(
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(15),
+                    bottomLeft: Radius.circular(15),
+                  ),
+                ),
+                tileColor: Colors.grey[850],
+                titleTextStyle: const TextStyle(fontSize: 18),
+              ),
+              expansionTileTheme: const ExpansionTileThemeData(
+                shape: Border.symmetric(
+                  vertical: BorderSide.none,
                 ),
               ),
-              tileColor: Colors.grey[850],
-              titleTextStyle: const TextStyle(fontSize: 18),
             ),
-            expansionTileTheme: const ExpansionTileThemeData(
-              shape: Border.symmetric(
-                vertical: BorderSide.none,
-              ),
-            ),
-          ),
-      initialRoute: '/',
-      onGenerateRoute: (settings) {
-        return PageRouteBuilder(
-          pageBuilder: (context, animation, secondaryAnimation) => MainLayout(
-              initialRoute: getPage(settings.name ?? "/") is HomePage
-                  ? "/"
-                  : settings.name ?? "/"),
-          settings: settings,
-        );
-      },
+        initialRoute: '/',
+        onGenerateRoute: (settings) {
+          return PageRouteBuilder(
+            pageBuilder: (context, animation, secondaryAnimation) => MainLayout(
+                initialRoute: getPage(settings.name ?? "/") is HomePage
+                    ? "/"
+                    : settings.name ?? "/"),
+            settings: settings,
+          );
+        },
+      ),
     );
   }
 }
@@ -142,7 +145,7 @@ class _MainLayoutState extends State<MainLayout> {
                 children: [
                   Center(
                     child: ConstrainedBox(
-                      constraints: const BoxConstraints(maxWidth: 1200),
+                      constraints: BoxConstraints(maxWidth: 1200, minHeight: MediaQuery.of(context).size.height / 1.6),
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Title(

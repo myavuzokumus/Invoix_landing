@@ -25,7 +25,7 @@ class Download extends StatelessWidget {
               }
             },
             child: Image.asset(
-              'assets/play_store.png',
+              'assets/images/play_store.png',
               width: 256,
             ),
           ),

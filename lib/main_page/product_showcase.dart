@@ -19,7 +19,7 @@ class ProductShowcase extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(20), // Yuvarlatma yarıçapı
             child: Image.asset(
-              'assets/phone_canvas.png',
+              'assets/images/phone_canvas.png',
               width: 620,
             ),
           ),

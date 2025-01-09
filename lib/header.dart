@@ -45,7 +45,7 @@ class Header extends StatelessWidget {
                           onNavigate('/');
                         }
                       },
-                      child: const Image(image: AssetImage('assets/logo_banner2.png'), width: 128),
+                      child: const Image(image: AssetImage('assets/images/logo_banner2.png'), width: 128),
                     ),
                   ),
                   Row(
@@ -64,7 +64,7 @@ class Header extends StatelessWidget {
                           onNavigate('/');
                         }
                       },
-                      child: const Image(image: AssetImage('assets/logo_banner2.png'), width: 128),
+                      child: const Image(image: AssetImage('assets/images/logo_banner2.png'), width: 128),
                     ),
                   ),
                   const SizedBox(height: 20),

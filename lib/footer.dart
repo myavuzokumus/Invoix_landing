@@ -50,9 +50,9 @@ class Footer extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 10),
-                Image.asset("assets/branding_image.png", height: 72),
-                const Text(
-                  '© 2024 InvoiX. All rights reserved.',
+                Image.asset("assets/images/branding_image.png", height: 72),
+                Text(
+                  '© ${DateTime.now().year} InvoiX. All rights reserved.',
                   style: TextStyle(color: Colors.white),
                 ),
               ],

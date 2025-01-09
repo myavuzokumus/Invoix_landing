@@ -13,17 +13,17 @@ class Features extends StatelessWidget {
           FeatureItem(
             title: 'Analyze your Invoices with Ease',
             description: "Doesn't matter how many invoices you have, InvoiX will help you analyze them with ease.",
-            imagePath: 'assets/holding_phone.png',
+            imagePath: 'assets/images/holding_phone.png',
           ),
           FeatureItem(
             title: 'AI-Powered Invoice Analysis',
             description: 'Analyze your invoices with AI to enhance efficiency and accuracy. Utilize AI to gain detailed insights and streamline your invoice processing.',
-            imagePath: 'assets/fast_process.png',
+            imagePath: 'assets/images/fast_process.png',
           ),
           FeatureItem(
             title: 'Stock Management Made Easy',
             description: 'InvoiX helps you manage your stock with ease. Track your stock levels, set reorder points, and generate reports to make informed decisions.',
-            imagePath: 'assets/secure_infrastructure.png',
+            imagePath: 'assets/images/secure_infrastructure.png',
           ),
         ],
       ),
