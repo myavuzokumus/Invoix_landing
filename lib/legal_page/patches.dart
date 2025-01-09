@@ -1,55 +1,46 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:invoix_landing/loading_status.dart';
 
 class PatchesPage extends StatelessWidget {
   const PatchesPage({super.key});
 
+  Future<String> _loadPatches() async {
+    return await rootBundle.loadString('assets/pages/patches.md');
+  }
+
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text('Patches',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-          SizedBox(height: 16),
-          Markdown(
-            shrinkWrap: true,
-            selectable: true,
-            data: '''
-# Patch notes for InvoiX app updates:
-## Patch 1.6.0
-- Design and layout changes.
-- Wide screen support added. 
-- Added file grab and drag for Web version.
-- Top 5 invoices is increased to 10.
-- Filter panel renewed.
-- All in one sheet for excel output added.
-- Subscription effects added.
-- Subscription management added.
-- The refreshing bug has been fixed when dragging the bottomsheet.
-- Fixed No Scroll: ProfileBar doesn't able to scrollable.
-- Date regex updated.
-
-## Patch 1.5.0
-- EN/TR support added.
-- Filter screen added.
-- Introduction page added. 
-- List element design has been changed. 
-- Backend migration and control of transactions.
-- Currency added.
-- Company id added.
-- Invoice analysis cache added.
-- AI Insights infrastructure added.
-- Excel output was switched to isolate structure and application freezing was prevented.
-- Profile screen has been added.
-- Plans page has been added.
-- Settings page has been added.
-''',
-          ),
-        ],
-      ),
+    return FutureBuilder(
+      future: _loadPatches(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return LoadingAnimation(
+            message: 'Loading patches...',
+            customHeight: MediaQuery.of(context).size.height / 1.5,
+          );
+        } else if (snapshot.hasError) {
+          return const Center(child: Text('Error loading patches'));
+        } else {
+          return Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text('Patches',
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+                const SizedBox(height: 16),
+                Markdown(
+                  shrinkWrap: true,
+                  selectable: true,
+                  data: snapshot.data ?? '',
+                ),
+              ],
+            ),
+          );
+        }
+      },
     );
   }
 }
