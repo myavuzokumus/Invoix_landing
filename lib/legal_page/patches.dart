@@ -25,18 +25,98 @@ class PatchesPage extends StatelessWidget {
         } else {
           return Padding(
             padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text('Patches',
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-                const SizedBox(height: 16),
-                Markdown(
-                  shrinkWrap: true,
-                  selectable: true,
-                  data: snapshot.data ?? '',
-                ),
-              ],
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text('InvoiX Changelog',
+                      style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+                  const SizedBox(height: 16),
+                  Markdown(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    selectable: true,
+                    data: snapshot.data ?? '',
+                    styleSheet: MarkdownStyleSheet(
+                      h1: TextStyle(
+                        fontFamily: 'Roboto',
+                        fontFamilyFallback: ['NotoColorEmoji'],
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      h2: TextStyle(
+                        fontFamily: 'Roboto',
+                        fontFamilyFallback: ['NotoColorEmoji'],
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      h3: TextStyle(
+                        fontFamily: 'Roboto',
+                        fontFamilyFallback: ['NotoColorEmoji'],
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      h4: TextStyle(
+                        fontFamily: 'Roboto',
+                        fontFamilyFallback: ['NotoColorEmoji'],
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      h5: TextStyle(
+                        fontFamily: 'Roboto',
+                        fontFamilyFallback: ['NotoColorEmoji'],
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      h6: TextStyle(
+                        fontFamily: 'Roboto',
+                        fontFamilyFallback: ['NotoColorEmoji'],
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      p: TextStyle(
+                        fontFamily: 'Roboto',
+                        fontFamilyFallback: ['NotoColorEmoji'],
+                        fontSize: 14,
+                      ),
+                      blockquote: TextStyle(
+                        fontFamily: 'Roboto',
+                        fontFamilyFallback: ['NotoColorEmoji'],
+                        fontSize: 14,
+                        fontStyle: FontStyle.italic,
+                      ),
+                      blockquotePadding: EdgeInsets.all(8.0),
+                      blockquoteDecoration: BoxDecoration(
+                        color: Colors.black45,
+                        borderRadius: BorderRadius.circular(4.0),
+                      ),
+                      listBullet: TextStyle(
+                        fontFamily: 'Roboto',
+                        fontFamilyFallback: ['NotoColorEmoji'],
+                        fontSize: 14,
+                      ),
+                      code: TextStyle(
+                        fontFamily: 'Roboto',
+                        fontFamilyFallback: ['NotoColorEmoji'],
+                        fontSize: 14,
+                        color: Colors.deepOrange,
+                      ),
+                      codeblockDecoration: BoxDecoration(
+                        color: Colors.black45,
+                        borderRadius: BorderRadius.circular(4.0),
+                      ),
+                      codeblockPadding: EdgeInsets.all(8.0),
+                      // Link stili
+                      a: TextStyle(
+                        fontFamily: 'Roboto',
+                        fontFamilyFallback: ['NotoColorEmoji'],
+                        fontSize: 14,
+                        color: Colors.blue,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           );
         }
