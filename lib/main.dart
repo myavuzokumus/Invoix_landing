@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:invoix_landing/animation.dart';
 import 'package:invoix_landing/footer.dart';
 import 'package:invoix_landing/header.dart';
@@ -7,7 +9,6 @@ import 'package:invoix_landing/legal_page/account_deletion.dart';
 import 'package:invoix_landing/legal_page/patches.dart';
 import 'package:invoix_landing/legal_page/privacy_policy.dart';
 import 'package:invoix_landing/legal_page/terms_of_service.dart';
-import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:invoix_landing/main_page/home_page.dart';
 import 'package:invoix_landing/theme.dart';
 
@@ -136,33 +137,90 @@ class _MainLayoutState extends State<MainLayout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xff310700),
       body: Column(
         children: [
           Header(onNavigate: _navigateTo, currentRoute: _currentRoute),
           Expanded(
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  Center(
-                    child: ConstrainedBox(
-                      constraints: BoxConstraints(maxWidth: 1200, minHeight: MediaQuery.of(context).size.height / 1.6),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: Title(
-                            key: ValueKey<String>(_currentRoute),
-                            color: Theme.of(context).scaffoldBackgroundColor,
-                            title: _updateTabTitle(_currentRoute),
-                            child: FadeInWidget(child: getPage(_currentRoute))),
+            child: LampContainer2(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Center(
+                      child: ConstrainedBox(
+                        constraints: BoxConstraints(maxWidth: 1200, minHeight: MediaQuery.of(context).size.height / 1.6),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          child: Title(
+                              key: ValueKey<String>(_currentRoute),
+                              color: Theme.of(context).scaffoldBackgroundColor,
+                              title: _updateTabTitle(_currentRoute),
+                              child: FadeInWidget(child: getPage(_currentRoute))),
+                        ),
                       ),
                     ),
-                  ),
-                  Footer(onNavigate: _navigateTo, currentRoute: _currentRoute),
-                ],
+                    Footer(onNavigate: _navigateTo, currentRoute: _currentRoute),
+                  ],
+                ),
               ),
             ),
           ),
         ],
       ),
+    );
+  }
+}
+
+class LampContainer2 extends StatelessWidget {
+  final Widget child;
+
+  const LampContainer2({
+    super.key,
+    required this.child,
+  });
+
+  @override
+
+  Widget build(BuildContext context) {
+    return Stack(
+      fit: StackFit.expand, // Stack'in tüm alanı kaplaması için
+      alignment: Alignment.center,
+      children: [
+        // Ana arka plan efektleri
+        Animate(
+          effects: [
+            FadeEffect(
+              delay: 300.milliseconds,
+              duration: 800.milliseconds,
+              begin: 0.5,
+              end: 1,
+            ),
+            CustomEffect(
+              delay: 300.milliseconds,
+              duration: 800.milliseconds,
+              builder: (context, value, child) => Container(
+                width: 120 + (value * 240),
+                height: 224,
+                decoration: BoxDecoration(
+                  gradient: SweepGradient(
+                    center: Alignment.topCenter,
+                    startAngle: 70 * (3.14159 / 279),
+                    endAngle: 2 * 3.14159,
+                    colors:  [
+                      Colors.transparent,
+                      Theme.of(context).colorScheme.surface,
+                      Colors.transparent,
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+
+        // İçerik
+        child
+      ],
     );
   }
 }
