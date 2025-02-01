@@ -25,18 +25,21 @@ class TermsOfServicePage extends StatelessWidget {
         } else {
           return Padding(
             padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text('Terms of Service',
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-                const SizedBox(height: 16),
-                Markdown(
-                  shrinkWrap: true,
-                  selectable: true,
-                  data: snapshot.data ?? '',
-                ),
-              ],
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text('Terms of Service',
+                      style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+                  const SizedBox(height: 16),
+                  Markdown(
+                    shrinkWrap: true,
+                    selectable: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    data: snapshot.data ?? '',
+                  ),
+                ],
+              ),
             ),
           );
         }
