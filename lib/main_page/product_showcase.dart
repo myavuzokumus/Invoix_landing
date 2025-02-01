@@ -30,49 +30,37 @@ class ProductShowcase extends StatelessWidget {
             ],
             child: Container(
               margin: const EdgeInsets.only(top: 8),
-              child: ShaderMask(
-                shaderCallback: (Rect bounds) {
-                  return const LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [
-                      Color(0xFFCBD5E1),
-                      Color(0xFF64748B),
-                    ],
-                  ).createShader(bounds);
-                },
-                child: Column(
-                  children: [
-                    AnimatedTitle(),
-                    const Text(
-                      'Streamline your invoice management with AI-powered analysis',
-                      style: TextStyle(
-                        fontSize: 24,
-                        color: Colors.white70,
-                        height: 1.5,
-                      ),
-                      textAlign: TextAlign.center,
+              child: Column(
+                children: [
+                  AnimatedTitle(),
+                  const Text(
+                    'Streamline your invoice management with AI-powered analysis',
+                    style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.white70,
+                      height: 1.5,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withValues(alpha: 0.2),
-                            blurRadius: 30,
-                            offset: const Offset(0, 10),
-                          ),
-                        ],
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Image.asset(
-                          'assets/images/phone_canvas.png',
-                          width: 720,
+                    textAlign: TextAlign.center,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withValues(alpha: 0.2),
+                          blurRadius: 30,
+                          offset: const Offset(0, 10),
                         ),
+                      ],
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image.asset(
+                        'assets/images/phone_canvas.png',
+                        width: 720,
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),
