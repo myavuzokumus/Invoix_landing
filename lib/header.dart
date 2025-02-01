@@ -13,12 +13,12 @@ class Header extends StatelessWidget {
       decoration: BoxDecoration(
         border: Border(
           bottom: BorderSide(
-            color: Colors.white.withOpacity(0.3),
+            color: Colors.white.withValues(alpha: 0.3),
           ),
         ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(1),
+            color: Colors.black.withValues(alpha: 1),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -45,7 +45,7 @@ class Header extends StatelessWidget {
                           onNavigate('/');
                         }
                       },
-                      child: const Image(image: AssetImage('assets/images/logo_banner2.png'), width: 128),
+                      child: const Image(image: AssetImage('assets/images/logo_banner_new.png'), width: 128),
                     ),
                   ),
                   Row(
@@ -64,7 +64,7 @@ class Header extends StatelessWidget {
                           onNavigate('/');
                         }
                       },
-                      child: const Image(image: AssetImage('assets/images/logo_banner2.png'), width: 128),
+                      child: const Image(image: AssetImage('assets/images/logo_banner_new.png'), width: 128),
                     ),
                   ),
                   const SizedBox(height: 20),
@@ -89,11 +89,11 @@ class Header extends StatelessWidget {
   List<Widget> _buildNavItems() {
     return [
       _buildNavItem('Home', '/'),
-      _buildNavItem('Privacy Policy', '/privacy'),
-      _buildNavItem('Terms of Service', '/terms'),
-      _buildNavItem('Delete Account', '/delete-account'),
+      //_buildNavItem('Privacy Policy', '/privacy'),
+      //_buildNavItem('Terms of Service', '/terms'),
+      //_buildNavItem('Delete Account', '/delete-account'),
       _buildNavItem('Patches', '/patches'),
-      const ElevatedButton(onPressed: null, child: Text("Web support soon!"))
+      //const ElevatedButton(onPressed: null, child: Text("Web support soon!"))
     ];
   }
 
@@ -115,7 +115,7 @@ class Header extends StatelessWidget {
           Positioned.fill(
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.2),
+                color: Colors.white.withValues(alpha: 0.2),
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(8),
                   topRight: Radius.circular(8),
