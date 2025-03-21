@@ -1,8 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
-class ProductShowcase extends StatelessWidget {
+class ProductShowcase extends StatefulWidget {
   const ProductShowcase({super.key});
+
+  @override
+  State<ProductShowcase> createState() => _ProductShowcaseState();
+}
+
+class _ProductShowcaseState extends State<ProductShowcase> {
+  late final YoutubePlayerController _controller;
+
+  @override
+  void initState() {
+    _controller = YoutubePlayerController.fromVideoId(
+      videoId: 'K_G_gr3GQM4',
+      autoPlay: false,
+      params: YoutubePlayerParams(
+        mute: false,
+        showControls: true,
+        showFullscreenButton: true,
+        strictRelatedVideos: true,
+      ),
+    );
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -52,13 +80,76 @@ class ProductShowcase extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
-                      child: Image.asset(
-                        'assets/images/phone_canvas.png',
-                        width: 720,
+                    child: GestureDetector(
+                      onTap: () {
+                        showDialog(
+                          context: context,
+                          builder: (context) => Dialog(
+                            backgroundColor: Colors.transparent,
+                            insetPadding: const EdgeInsets.symmetric(horizontal: 24, vertical: 40),
+                            child: Stack(
+                              clipBehavior: Clip.none,
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(16),
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width * 0.8,
+                                    height: MediaQuery.of(context).size.width * 0.45,
+                                    color: Colors.black,
+                                    child: YoutubePlayer(
+                                      controller: _controller,
+                                      aspectRatio: 16 / 9,
+                                    ),
+                                  ),
+                                ),
+                                // Kapat butonu
+                                Positioned(
+                                  top: -15,
+                                  right: -15,
+                                  child: GestureDetector(
+                                    onTap: () => Navigator.pop(context),
+                                    child: Container(
+                                      decoration: const BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Colors.white,
+                                      ),
+                                      padding: const EdgeInsets.all(5),
+                                      child: const Icon(Icons.close, color: Colors.black, size: 20),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+                      },
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          // Resim
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: Image.asset(
+                              'assets/images/phone_canvas.png',
+                              width: 720,
+                            ),
+                          ),
+                          // Play butonu
+                          Container(
+                            decoration: BoxDecoration(
+                              color: Colors.white.withValues(alpha: 0.8),
+                              shape: BoxShape.circle,
+                            ),
+                            padding: const EdgeInsets.all(16),
+                            child: const Icon(
+                              Icons.play_arrow,
+                              color: Colors.black,
+                              size: 40,
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
+                    )
                   ),
                 ],
               ),
