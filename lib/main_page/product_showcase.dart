@@ -15,7 +15,6 @@ class _ProductShowcaseState extends State<ProductShowcase> {
 
   @override
   void initState() {
-    super.initState();
     _controller = YoutubePlayerController.fromVideoId(
       videoId: 'K_G_gr3GQM4',
       autoPlay: false,
@@ -26,12 +25,7 @@ class _ProductShowcaseState extends State<ProductShowcase> {
         strictRelatedVideos: true,
       ),
     );
-
-
-
-    Future.delayed(const Duration(seconds: 1), () {
-      if (mounted) setState(() {});
-    });
+    super.initState();
   }
 
   @override
@@ -60,20 +54,20 @@ class _ProductShowcaseState extends State<ProductShowcase> {
             ],
             child: Container(
               margin: const EdgeInsets.only(top: 8),
-              child: Column(
-                children: [
-                  AnimatedTitle(),
-                  const Text(
-                    'Streamline your invoice management with AI-powered analysis',
-                    style: TextStyle(
-                      fontSize: 24,
-                      color: Colors.white70,
-                      height: 1.5,
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    AnimatedTitle(),
+                    const Text(
+                      'Streamline your invoice management with AI-powered analysis',
+                      style: TextStyle(
+                        fontSize: 24,
+                        color: Colors.white70,
+                        height: 1.5,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
-                  ),
-                  Flexible(
-                    child: Container(
+                    Container(
                       height: 720,
                       decoration: BoxDecoration(
                         boxShadow: [
@@ -93,8 +87,8 @@ class _ProductShowcaseState extends State<ProductShowcase> {
                         ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
