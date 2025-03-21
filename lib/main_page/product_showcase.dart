@@ -54,24 +54,24 @@ class ProductShowcase extends StatelessWidget {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  Expanded(
-                    child: Center(
-                      child: Container(
-                        decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withValues(alpha: 0.2),
-                              blurRadius: 30,
-                              offset: const Offset(0, 10),
-                            ),
-                          ],
-                        ),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: YoutubePlayer(
-                            controller: _controller,
-                            aspectRatio: 16 / 9,
+                  Flexible(
+                    child: Container(
+                      height: 720,
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withValues(alpha: 0.2),
+                            blurRadius: 30,
+                            offset: const Offset(0, 10),
                           ),
+                        ],
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: YoutubePlayer(
+                          controller: _controller,
+                          aspectRatio: 16 / 9,
+                          enableFullScreenOnVerticalDrag: true,
                         ),
                       ),
                     ),
