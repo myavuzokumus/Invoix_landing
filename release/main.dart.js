@@ -24862,11 +24862,13 @@ _.a=a
 _.b=b
 _.c=c
 _.d=d},
-Nz:function Nz(a,b,c,d){var _=this
+Nz:function Nz(a,b,c,d,e,f){var _=this
 _.a=a
 _.f=b
-_.x=c
-_.ax=d},
+_.w=c
+_.x=d
+_.z=e
+_.ax=f},
 a8J:function a8J(a,b){this.a=a
 this.b=b},
 Bv:function Bv(a,b,c,d,e,f){var _=this
@@ -78306,7 +78308,7 @@ A.a0r.prototype={
 $0(){},
 $S:0}
 A.ol.prototype={
-M(a){var s=null,r=A.aK_("K_G_gr3GQM4",new A.Nz(!0,!0,!0,!0))
+M(a){var s=null,r=A.aK_("K_G_gr3GQM4",new A.Nz(!0,!0,!1,!0,!1,!0))
 r.r6("cueVideoById",A.an(["videoId","K_G_gr3GQM4","startSeconds",null,"endSeconds",null],t.N,t.z))
 return A.df(A.b([new A.Kz(r,s),new A.I5(s),new A.I1(s),new A.x4(s)],t.p),B.X,B.S,B.a2,0)}}
 A.Kz.prototype={
@@ -82115,42 +82117,42 @@ A.Nx.prototype={
 k(a){var s=this
 return"YoutubeMetaData(videoId: "+s.a+", title: "+s.b+", author: "+s.c+", duration: "+B.i.hn(s.d.a,1e6)+" sec.)"}}
 A.Nz.prototype={
-zg(){var s=t.N,r=t.z,q=A.p(s,r)
-q.m(0,"autoplay",1)
-q.m(0,"mute",this.a?1:0)
-q.m(0,"cc_lang_pref","en")
-q.m(0,"cc_load_policy",1)
-q.m(0,"color","white")
-q.m(0,"controls",1)
-q.m(0,"disablekb",0)
-q.m(0,"enablejsapi",1)
-q.m(0,"fs",this.x?1:0)
-q.m(0,"hl","en")
-q.m(0,"iv_load_policy",1)
-q.m(0,"loop",0)
-q.m(0,"modestbranding","1")
-q.L(0,A.an(["origin",A.kJ().gkQ(),"widget_referrer",A.kJ().gkQ()],s,r))
-q.m(0,"playsinline",1)
-q.m(0,"rel",!this.ax?1:0)
-return q},
-jU(){var s=t.N,r=t.z,q=A.p(s,r)
-q.m(0,"autoplay",1)
-q.m(0,"mute",this.a?1:0)
-q.m(0,"cc_lang_pref","en")
-q.m(0,"cc_load_policy",1)
-q.m(0,"color","white")
-q.m(0,"controls",1)
-q.m(0,"disablekb",0)
-q.m(0,"enablejsapi",1)
-q.m(0,"fs",this.x?1:0)
-q.m(0,"hl","en")
-q.m(0,"iv_load_policy",1)
-q.m(0,"loop",0)
-q.m(0,"modestbranding","1")
-q.L(0,A.an(["origin",A.kJ().gkQ(),"widget_referrer",A.kJ().gkQ()],s,r))
-q.m(0,"playsinline",1)
-q.m(0,"rel",!this.ax?1:0)
-return B.b3.xC(q,null)}}
+zg(){var s=this,r=t.N,q=t.z,p=A.p(r,q)
+p.m(0,"autoplay",1)
+p.m(0,"mute",s.a?1:0)
+p.m(0,"cc_lang_pref","en")
+p.m(0,"cc_load_policy",1)
+p.m(0,"color","white")
+p.m(0,"controls",1)
+p.m(0,"disablekb",0)
+p.m(0,"enablejsapi",s.w?1:0)
+p.m(0,"fs",s.x?1:0)
+p.m(0,"hl","en")
+p.m(0,"iv_load_policy",s.z?1:3)
+p.m(0,"loop",0)
+p.m(0,"modestbranding","1")
+p.L(0,A.an(["origin",A.kJ().gkQ(),"widget_referrer",A.kJ().gkQ()],r,q))
+p.m(0,"playsinline",1)
+p.m(0,"rel",!s.ax?1:0)
+return p},
+jU(){var s=this,r=t.N,q=t.z,p=A.p(r,q)
+p.m(0,"autoplay",1)
+p.m(0,"mute",s.a?1:0)
+p.m(0,"cc_lang_pref","en")
+p.m(0,"cc_load_policy",1)
+p.m(0,"color","white")
+p.m(0,"controls",1)
+p.m(0,"disablekb",0)
+p.m(0,"enablejsapi",s.w?1:0)
+p.m(0,"fs",s.x?1:0)
+p.m(0,"hl","en")
+p.m(0,"iv_load_policy",s.z?1:3)
+p.m(0,"loop",0)
+p.m(0,"modestbranding","1")
+p.L(0,A.an(["origin",A.kJ().gkQ(),"widget_referrer",A.kJ().gkQ()],r,q))
+p.m(0,"playsinline",1)
+p.m(0,"rel",!s.ax?1:0)
+return B.b3.xC(p,null)}}
 A.a8J.prototype={
 G(){return"PointerEvents."+this.b}}
 A.Bv.prototype={
@@ -87361,7 +87363,7 @@ B.k4=new A.Bt(0,"start")
 B.U0=new A.Bt(1,"end")
 B.yd=new A.Bt(2,"center")
 B.U7=new A.Nx("","","",B.r)
-B.VE=new A.Nz(!1,!0,!1,!1)
+B.VE=new A.Nz(!1,!0,!0,!1,!0,!1)
 B.aw=new A.uj(0,"forward")
 B.k6=new A.uj(1,"reverse")
 B.VF=new A.agV(0,"elevated")

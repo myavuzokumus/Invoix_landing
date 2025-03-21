@@ -13,6 +13,8 @@ class ProductShowcase extends StatelessWidget {
       showControls: true,
       showFullscreenButton: true,
       strictRelatedVideos: true,
+      enableJavaScript: false,
+      showVideoAnnotations: false,
     ),
   );
 
