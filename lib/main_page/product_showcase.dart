@@ -2,21 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
-class ProductShowcase extends StatelessWidget {
-  ProductShowcase({super.key});
+class ProductShowcase extends StatefulWidget {
+  const ProductShowcase({super.key});
 
-  final _controller = YoutubePlayerController.fromVideoId(
-    videoId: 'K_G_gr3GQM4',
-    autoPlay: false,
-    params: YoutubePlayerParams(
-      mute: true,
-      showControls: true,
-      showFullscreenButton: true,
-      strictRelatedVideos: true,
-      enableJavaScript: false,
-      showVideoAnnotations: false,
-    ),
-  );
+  @override
+  State<ProductShowcase> createState() => _ProductShowcaseState();
+}
+
+class _ProductShowcaseState extends State<ProductShowcase> {
+
+  late final YoutubePlayerController _controller;
+
+  @override
+  void initState() {
+    _controller = YoutubePlayerController.fromVideoId(
+      videoId: 'K_G_gr3GQM4',
+      autoPlay: false,
+      params: YoutubePlayerParams(
+        mute: true,
+        showControls: true,
+        showFullscreenButton: true,
+        strictRelatedVideos: true,
+      ),
+    );
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
