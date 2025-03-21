@@ -1,4 +1,4 @@
-*Last updated: December 6, 2024*
+*Last updated: March 21, 2025*
 
 Please read these Terms of Service ("Terms") carefully before using the InvoiX application and services. By accessing or using our services, you agree to these Terms.
 
@@ -61,6 +61,19 @@ Any content you upload or share through the service remains your property. By up
 
 InvoiX is not responsible for damages caused by incorrect information provided by the AI or third-party services used within the application.
 
-## 14. Contact Us
+## 14. Subscriptions and Payments
+
+Access to InvoiX services is provided according to your chosen subscription plan. The following terms apply to subscriptions:
+
+- Subscriptions automatically renew and continue until canceled.
+- Pricing and payment terms are specified on the subscription purchase page.
+- Subscription fees are collected in advance and no refunds are provided for partial periods.
+- **When your subscription is cancelled or expires, all remaining usage rights will be reset and your access to premium features will be terminated.**
+- Your subscription cancellation remains active until the end of the current billing period.
+- The ability to switch between subscription plans may be offered, in which case special terms apply.
+
+For subscription-related issues, please contact us at support@sc-riber.games.
+
+## 15. Contact Us
 
 For questions or concerns about these Terms, contact us at support@sc-riber.games.

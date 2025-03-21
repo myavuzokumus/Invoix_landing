@@ -1,8 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 class ProductShowcase extends StatelessWidget {
-  const ProductShowcase({super.key});
+  ProductShowcase({super.key});
+
+  final _controller = YoutubePlayerController.fromVideoId(
+    videoId: 'K_G_gr3GQM4',
+    autoPlay: false,
+    params: YoutubePlayerParams(
+      mute: true,
+      showControls: true,
+      showFullscreenButton: true,
+      strictRelatedVideos: true,
+    ),
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -42,21 +54,23 @@ class ProductShowcase extends StatelessWidget {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withValues(alpha: 0.2),
-                          blurRadius: 30,
-                          offset: const Offset(0, 10),
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withValues(alpha: 0.2),
+                            blurRadius: 30,
+                            offset: const Offset(0, 10),
+                          ),
+                        ],
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: YoutubePlayer(
+                          controller: _controller,
+                          aspectRatio: 16 / 9,
                         ),
-                      ],
-                    ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
-                      child: Image.asset(
-                        'assets/images/phone_canvas.png',
-                        width: 720,
                       ),
                     ),
                   ),
