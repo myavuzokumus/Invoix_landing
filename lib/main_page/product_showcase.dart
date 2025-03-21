@@ -15,6 +15,7 @@ class _ProductShowcaseState extends State<ProductShowcase> {
 
   @override
   void initState() {
+    super.initState();
     _controller = YoutubePlayerController.fromVideoId(
       videoId: 'K_G_gr3GQM4',
       autoPlay: false,
@@ -25,7 +26,12 @@ class _ProductShowcaseState extends State<ProductShowcase> {
         strictRelatedVideos: true,
       ),
     );
-    super.initState();
+
+
+
+    Future.delayed(const Duration(seconds: 1), () {
+      if (mounted) setState(() {});
+    });
   }
 
   @override
